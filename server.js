@@ -29,7 +29,7 @@ const corsOptions = {
   origin: [ process.env.FRONTEND_URL || 'http://localhost:3000' ], 
   methods: '*',  
   allowedHeaders: '*',  
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: '*',
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
