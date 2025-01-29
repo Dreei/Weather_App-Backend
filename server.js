@@ -26,14 +26,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // simple cors configuration (not for production)
 const corsOptions = {
-  origin: process.env.FRONTEND_URL, 
+  origin: '*',  // Temporarily allow all origins for testing
   methods: '*',  
   allowedHeaders: '*',  
-  allowedHeaders: '*',
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
-
 // Database Connection 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/weathertracker', {
   useNewUrlParser: true,
