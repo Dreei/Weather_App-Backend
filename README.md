@@ -22,6 +22,8 @@ Before you begin, ensure you have met the following requirements:
 - npm
 - MongoDB (local installation or a cloud-hosted instance)
       - MONGODB_URI (in the `.env` file)
+- API key for OpenWeatherMap
+      - OPENWEATHERMAP_API_KEY (in the `.env` file)
 
  
 
@@ -34,4 +36,5 @@ To get the frontend running locally:
 3. Install dependencies using npm install
 4. Create a `.env` file in the root directory and add the following environment variables:
     - MONGODB_URI
+    - OPENWEATHERMAP_API_KEY
 
