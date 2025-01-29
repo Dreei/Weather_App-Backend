@@ -44,14 +44,11 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/weathertracker'
 });
 
 app.post('/api/weather', 
-  validateWeatherRecord, 
-  validateLocation, 
   createWeatherRecord
 );
 app.get('/api/weather', getWeatherRecords);
-app.get('/api/weather/:id', validateRecordId, getWeatherRecordbyId);
+app.get('/api/weather/:id', getWeatherRecordbyId);
 app.put('/api/weather/:id', 
-
   updateWeatherRecord
 );
 app.delete('/api/weather/:id', deleteWeatherRecord);
